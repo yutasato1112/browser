@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="browser" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="0at-0L-LJw">
+                                <rect key="frame" x="10" y="54" width="394" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="URL" returnKeyType="go"/>
+                            </textField>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="G4a-6b-tqT">
+                                <rect key="frame" x="0.0" y="98" width="414" height="715"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </webView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uYw-fg-AH4">
+                                <rect key="frame" x="0.0" y="813" width="414" height="49"/>
+                                <items>
+                                    <barButtonItem title="←" id="rAh-3u-2EK">
+                                        <connections>
+                                            <action selector="goback:" destination="BYZ-38-t0r" id="LUj-jn-hr5"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="→" id="gJW-u4-FQF">
+                                        <connections>
+                                            <action selector="goforward:" destination="BYZ-38-t0r" id="62o-rs-U4y"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="9z6-RI-aVh"/>
+                                    <barButtonItem systemItem="refresh" id="m95-a9-koh">
+                                        <connections>
+                                            <action selector="reload:" destination="BYZ-38-t0r" id="jBT-NP-vK2"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="wy0-7i-5ad">
+                                <rect key="frame" x="382" y="61" width="20" height="20"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="wy0-7i-5ad" secondAttribute="trailing" constant="10" id="1vC-Nc-6hk"/>
+                            <constraint firstItem="uYw-fg-AH4" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="92c-hx-mrs"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="wy0-7i-5ad" secondAttribute="trailing" constant="20" id="COZ-1a-GHK"/>
+                            <constraint firstItem="0at-0L-LJw" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="KSG-gM-9Zw"/>
+                            <constraint firstAttribute="trailing" secondItem="uYw-fg-AH4" secondAttribute="trailing" id="OaX-nI-r8J"/>
+                            <constraint firstItem="uYw-fg-AH4" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="dAJ-78-j35"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="G4a-6b-tqT" secondAttribute="trailing" id="jbE-GC-2Rt"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="0at-0L-LJw" secondAttribute="trailing" constant="10" id="kc9-0b-LFk"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="wy0-7i-5ad" secondAttribute="trailing" constant="12" id="kgx-Wu-D1y"/>
+                            <constraint firstItem="0at-0L-LJw" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="km9-dG-YYQ"/>
+                            <constraint firstItem="G4a-6b-tqT" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="meo-Cd-Ues"/>
+                            <constraint firstItem="G4a-6b-tqT" firstAttribute="top" secondItem="0at-0L-LJw" secondAttribute="bottom" constant="10" id="nFl-xz-Z7f"/>
+                            <constraint firstItem="wy0-7i-5ad" firstAttribute="centerY" secondItem="0at-0L-LJw" secondAttribute="centerY" id="onF-fM-aPc"/>
+                            <constraint firstItem="uYw-fg-AH4" firstAttribute="top" secondItem="G4a-6b-tqT" secondAttribute="bottom" id="qRq-k7-g62"/>
+                            <constraint firstItem="wy0-7i-5ad" firstAttribute="centerY" secondItem="0at-0L-LJw" secondAttribute="centerY" id="r9e-91-K6u"/>
+                            <constraint firstItem="wy0-7i-5ad" firstAttribute="centerY" secondItem="0at-0L-LJw" secondAttribute="centerY" id="zSU-qo-br7"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="backButton" destination="rAh-3u-2EK" id="B2C-41-wX5"/>
+                        <outlet property="browserActivityIndicatorView" destination="wy0-7i-5ad" id="32h-Og-YFM"/>
+                        <outlet property="browserWebView" destination="G4a-6b-tqT" id="Jih-Kx-KNn"/>
+                        <outlet property="forwardButton" destination="gJW-u4-FQF" id="hKu-6k-Aek"/>
+                        <outlet property="reloadButton" destination="m95-a9-koh" id="8zz-do-BDi"/>
+                        <outlet property="urlTextField" destination="0at-0L-LJw" id="vX7-oI-Bwx"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="138.61607142857142"/>
+        </scene>
+    </scenes>
+</document>
